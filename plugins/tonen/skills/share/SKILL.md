@@ -20,7 +20,7 @@ The user never edits this tag; you do. Steps:
    - Create React App: `public/index.html`. Astro, SvelteKit, Remix, Nuxt: the root layout, `src/app.html`, `app/root.tsx` or `app.vue`/`nuxt.config` head.
    If it's unclear which file is the real template, ask once.
 2. **Project id.** Comments are tied to it. Use, in this order: an id the user passed (`/tonen:share k7f2q9xm3a`), the `data-project` of a Tonen tag already in the repo, or a new one: 10 random lowercase letters and digits, e.g. `node -e "console.log(require('crypto').randomBytes(16).toString('base64url').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,10))"`. One id per repo, the same on every page.
-3. **Branch.** `git branch --show-current`. Leave `data-branch` out when not in git.
+3. **Branch.** `repo/branch`, so people see which repository it is: the repo name from `git remote get-url origin` (last part, without `.git`; the git root folder name if there's no remote), then `git branch --show-current`. Example: `tonen-mvp/main`. Leave `data-branch` out when not in git.
 4. **Insert or update.** The tag must be the first script in `<head>`: right after `<meta charset>` if there is one, otherwise the first child of `<head>`. It must be a plain blocking `<script src>`: never `async`, `defer`, `type="module"`, or Next's `<Script>` component. In JSX write it exactly as `<script src="…" data-project="…" data-branch="…"></script>`. If the tag is already there, only update `data-branch` and move it to the top if needed.
 5. **Report.** Show the diff. Don't commit unless asked. Then give the link to share:
    - A dev server that's running or configured: its local URL. Tonen works on localhost too, but only people on this computer can open it.
