@@ -1,0 +1,6 @@
+{
+  "name": "tonen",
+  "description": "Share a prototype with pinned comments and live visitors: /tonen:share, /tonen:remove",
+  "version": "0.1.0",
+  "author": { "name": "Tonen" }
+}

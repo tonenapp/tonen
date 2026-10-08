@@ -1,0 +1,12 @@
+{
+  "name": "tonen",
+  "description": "Tonen: comment on running prototypes, like Figma",
+  "owner": { "name": "Tonen" },
+  "plugins": [
+    {
+      "name": "tonen",
+      "source": "./plugins/tonen",
+      "description": "Share a prototype with pinned comments and live visitors: /tonen:share, /tonen:remove"
+    }
+  ]
+}
